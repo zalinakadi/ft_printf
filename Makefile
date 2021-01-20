@@ -6,7 +6,7 @@
 #    By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/20 13:43:31 by eproveme          #+#    #+#              #
-#    Updated: 2021/01/20 13:44:49 by eproveme         ###   ########.fr        #
+#    Updated: 2021/01/20 20:48:21 by eproveme         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,14 +27,14 @@ OBJS = $(SRCS:.c=.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS) $(L_OBJS) $(HEADER) $(L_HEADER)
-	ar rc $(NAME) $(OBJS) $(L_OBJS)
+$(NAME):	$(OBJS) $(HEADER) $(L_HEADER)
+	ar rc $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS) $(L_OBJS)
+	$(RM) $(OBJS)
 
 fclean:	clean
-	$(RM) $(NAME) $(L_NAME)
+	$(RM) $(NAME)
 
 re:	fclean all
 
