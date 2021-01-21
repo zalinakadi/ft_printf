@@ -6,13 +6,13 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:01:22 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 13:49:24 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:37:16 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	parse_dot(va_list arg, const char **format, struct s_flag *flag)
+void	parse_dot(va_list arg, const char **format, t_flag *flag)
 {
 	flag->prec = sign_num(arg, &(*format));
 	if (flag->prec == 0)
@@ -21,7 +21,7 @@ void	parse_dot(va_list arg, const char **format, struct s_flag *flag)
 		flag->prec = 0;
 }
 
-void	parse_zero(va_list arg, const char **format, struct s_flag *flag)
+void	parse_zero(va_list arg, const char **format, t_flag *flag)
 {
 	if (**format == '-')
 	{
@@ -44,7 +44,7 @@ void	parse_zero(va_list arg, const char **format, struct s_flag *flag)
 		(*format)--;
 }
 
-void	parse_min(va_list arg, const char **format, struct s_flag *flag)
+void	parse_min(va_list arg, const char **format, t_flag *flag)
 {
 	if (flag->zero != -1)
 		(*format)++;
@@ -63,7 +63,7 @@ void	parse_min(va_list arg, const char **format, struct s_flag *flag)
 		(*format)--;
 }
 
-void	parse_width(va_list arg, const char **format, struct s_flag *flag)
+void	parse_width(va_list arg, const char **format, t_flag *flag)
 {
 	flag->width = sign_num(arg, &(*format));
 	if (flag->width < 0)
@@ -73,7 +73,7 @@ void	parse_width(va_list arg, const char **format, struct s_flag *flag)
 	}
 }
 
-void	ft_parser(va_list arg, const char **format, struct s_flag *flag)
+void	ft_parser(va_list arg, const char **format, t_flag *flag)
 {
 	while (none_spec(**format))
 	{

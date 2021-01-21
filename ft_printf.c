@@ -6,7 +6,7 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 01:04:42 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 13:49:26 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:32:08 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int		print_format(va_list arg, const char **format)
 {
-	struct s_flag	flag;
-	int				i;
+	t_flag	flag;
+	int		i;
 
 	i = 0;
 	while (**format)
 	{
 		if (**format == '%')
 		{
-			flag = null_flag();
+			null_flag(&flag);
 			(*format)++;
 			if (**format == '\0')
 				return (i);

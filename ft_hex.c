@@ -6,13 +6,13 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:37:00 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 17:16:41 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:36:36 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_hex_dot(struct s_flag *flag, int i, unsigned int x)
+int		ft_hex_dot(t_flag *flag, int i, unsigned int x)
 {
 	i = 0;
 	num_flag(flag);
@@ -29,7 +29,7 @@ int		ft_hex_dot(struct s_flag *flag, int i, unsigned int x)
 	return (i);
 }
 
-int		ft_hex_solo(struct s_flag *flag, int i, unsigned int x)
+int		ft_hex_solo(t_flag *flag, int i, unsigned int x)
 {
 	i = 0;
 	num_flag(flag);
@@ -46,7 +46,7 @@ int		ft_hex_solo(struct s_flag *flag, int i, unsigned int x)
 	return (i);
 }
 
-int		ft_hex(va_list arg, struct s_flag *flag, int i)
+int		ft_hex(va_list arg, t_flag *flag, int i)
 {
 	unsigned int x;
 

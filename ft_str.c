@@ -6,13 +6,13 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:33:47 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 13:35:17 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:38:01 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_s_mindot(struct s_flag *flag, int i, char *s)
+int		ft_s_mindot(t_flag *flag, int i, char *s)
 {
 	dot_flag(flag, 's');
 	while (flag->dot > 0)
@@ -28,7 +28,7 @@ int		ft_s_mindot(struct s_flag *flag, int i, char *s)
 	return (i);
 }
 
-int		ft_s_plusdot(struct s_flag *flag, int i, char *s)
+int		ft_s_plusdot(t_flag *flag, int i, char *s)
 {
 	char *str;
 
@@ -49,7 +49,7 @@ int		ft_s_plusdot(struct s_flag *flag, int i, char *s)
 	return (i);
 }
 
-int		ft_str_solo(struct s_flag *flag, int i, char *s)
+int		ft_str_solo(t_flag *flag, int i, char *s)
 {
 	i = 0;
 	num_flag(flag);
@@ -76,7 +76,7 @@ int		ft_str_solo(struct s_flag *flag, int i, char *s)
 	return (i);
 }
 
-int		ft_str(va_list arg, struct s_flag *flag, int i)
+int		ft_str(va_list arg, t_flag *flag, int i)
 {
 	char *s;
 

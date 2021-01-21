@@ -6,13 +6,13 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:06:10 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 13:23:48 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:45:34 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	dot_flag(struct s_flag *flag, char c)
+void	dot_flag(t_flag *flag, char c)
 {
 	if (c == 'i')
 	{
@@ -30,7 +30,7 @@ void	dot_flag(struct s_flag *flag, char c)
 	}
 }
 
-void	num_flag(struct s_flag *flag)
+void	num_flag(t_flag *flag)
 {
 	if (flag->width)
 		flag->num = flag->width;
@@ -40,6 +40,17 @@ void	num_flag(struct s_flag *flag)
 		flag->num = flag->min;
 	else if (flag->prec)
 		flag->num = flag->prec;
+}
+
+void	null_flag(t_flag *flag)
+{
+	flag->width = 0;
+	flag->min = 0;
+	flag->zero = 0;
+	flag->prec = 0;
+	flag->dot = 0;
+	flag->num = 0;
+	flag->len = 0;
 }
 
 int		ft_atoi(const char *str)

@@ -6,7 +6,7 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:28:35 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 17:20:13 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:38:19 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		u_count(unsigned int n)
 	return (i);
 }
 
-int		ft_u_mindot(struct s_flag *flag, int i, unsigned int u)
+int		ft_u_mindot(t_flag *flag, int i, unsigned int u)
 {
 	i = 0;
 	if (flag->prec == -1 && u == 0)
@@ -41,7 +41,7 @@ int		ft_u_mindot(struct s_flag *flag, int i, unsigned int u)
 	return (i);
 }
 
-int		ft_u_plusdot(struct s_flag *flag, int i, unsigned int u)
+int		ft_u_plusdot(t_flag *flag, int i, unsigned int u)
 {
 	i = 0;
 	num_flag(flag);
@@ -55,7 +55,7 @@ int		ft_u_plusdot(struct s_flag *flag, int i, unsigned int u)
 	return (i);
 }
 
-int		ft_u_solo(struct s_flag *flag, int i, unsigned int u)
+int		ft_u_solo(t_flag *flag, int i, unsigned int u)
 {
 	i = 0;
 	num_flag(flag);
@@ -72,7 +72,7 @@ int		ft_u_solo(struct s_flag *flag, int i, unsigned int u)
 	return (i);
 }
 
-int		ft_u(va_list arg, struct s_flag *flag, int i)
+int		ft_u(va_list arg, t_flag *flag, int i)
 {
 	unsigned int	u;
 

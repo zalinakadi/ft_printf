@@ -6,7 +6,7 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:16:59 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 13:21:44 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:37:44 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		none_spec(int n)
 	return (0);
 }
 
-int		ft_char(va_list arg, struct s_flag *flag, int i)
+int		ft_char(va_list arg, t_flag *flag, int i)
 {
 	int c;
 
@@ -42,7 +42,7 @@ int		ft_char(va_list arg, struct s_flag *flag, int i)
 	return (i);
 }
 
-int		ft_pct(struct s_flag *flag, int i)
+int		ft_pct(t_flag *flag, int i)
 {
 	i = 0;
 	num_flag(flag);
@@ -61,7 +61,7 @@ int		ft_pct(struct s_flag *flag, int i)
 	return (i);
 }
 
-int		ft_specs(va_list arg, const char **format, struct s_flag *flag, int i)
+int		ft_specs(va_list arg, const char **format, t_flag *flag, int i)
 {
 	i = 0;
 	if (**format == '%')
