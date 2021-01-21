@@ -6,7 +6,7 @@
 /*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:01:22 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:37:16 by eproveme         ###   ########.fr       */
+/*   Updated: 2021/01/21 22:35:13 by eproveme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	parse_dot(va_list arg, const char **format, t_flag *flag)
 
 void	parse_zero(va_list arg, const char **format, t_flag *flag)
 {
+	while (**format == '0')
+		(*format)++;
 	if (**format == '-')
 	{
 		(*format)++;
