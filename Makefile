@@ -27,7 +27,7 @@ OBJS = $(SRCS:.c=.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS) $(HEADER) $(L_HEADER)
+$(NAME):	$(OBJS) $(HEADER)
 	ar rc $(NAME) $(OBJS)
 
 clean:
