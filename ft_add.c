@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_add.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 13:06:10 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:45:34 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
 void	dot_flag(t_flag *flag, char c)
@@ -53,7 +41,7 @@ void	null_flag(t_flag *flag)
 	flag->len = 0;
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long long	num;
 	int			i;
@@ -78,7 +66,7 @@ int		ft_atoi(const char *str)
 	return (num);
 }
 
-int		sign_num(va_list arg, const char **format)
+int	sign_num(va_list arg, const char **format)
 {
 	int		n;
 

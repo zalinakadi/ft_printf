@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 01:05:47 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:39:53 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
@@ -17,7 +5,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct	s_flag
+typedef struct s_flag
 {
 	int			width;
 	int			min;

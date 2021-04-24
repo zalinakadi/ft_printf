@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_x.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 13:35:36 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:38:33 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
-int		x_count(unsigned int n)
+int	x_count(unsigned int n)
 {
 	int	i;
 
@@ -28,7 +16,7 @@ int		x_count(unsigned int n)
 	return (i);
 }
 
-int		ft_x_dot(t_flag *flag, int i, unsigned int x)
+int	ft_x_dot(t_flag *flag, int i, unsigned int x)
 {
 	i = 0;
 	num_flag(flag);
@@ -45,7 +33,7 @@ int		ft_x_dot(t_flag *flag, int i, unsigned int x)
 	return (i);
 }
 
-int		ft_x_solo(t_flag *flag, int i, unsigned int x)
+int	ft_x_solo(t_flag *flag, int i, unsigned int x)
 {
 	i = 0;
 	num_flag(flag);
@@ -62,9 +50,9 @@ int		ft_x_solo(t_flag *flag, int i, unsigned int x)
 	return (i);
 }
 
-int		ft_x(va_list arg, t_flag *flag, int i)
+int	ft_x(va_list arg, t_flag *flag, int i)
 {
-	unsigned int x;
+	unsigned int	x;
 
 	x = va_arg(arg, unsigned int);
 	flag->len = x_count(x);

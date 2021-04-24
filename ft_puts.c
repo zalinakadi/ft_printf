@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_puts.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 13:10:02 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/20 15:54:06 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
 int	ft_putchar(char c)
@@ -19,7 +7,7 @@ int	ft_putchar(char c)
 
 int	ft_putstr(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s[i])
@@ -78,7 +66,7 @@ int	ft_putunbr(unsigned int n)
 
 int	ft_puthex(unsigned long long int n, int spec)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n == 0)

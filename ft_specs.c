@@ -1,28 +1,16 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_specs.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 13:16:59 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:37:44 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
-int		none_spec(int n)
+int	none_spec(int n)
 {
-	if (n != 'c' && n != 's' && n != 'p' && n != 'd' && n != 'i' && n != 'u' &&
-		n != 'x' && n != 'X' && n != '%')
+	if (n != 'c' && n != 's' && n != 'p' && n != 'd' && n != 'i' && n != 'u'
+		&& n != 'x' && n != 'X' && n != '%')
 		return (1);
 	return (0);
 }
 
-int		ft_char(va_list arg, t_flag *flag, int i)
+int	ft_char(va_list arg, t_flag *flag, int i)
 {
-	int c;
+	int	c;
 
 	i = 0;
 	c = va_arg(arg, int);
@@ -42,7 +30,7 @@ int		ft_char(va_list arg, t_flag *flag, int i)
 	return (i);
 }
 
-int		ft_pct(t_flag *flag, int i)
+int	ft_pct(t_flag *flag, int i)
 {
 	i = 0;
 	num_flag(flag);
@@ -61,7 +49,7 @@ int		ft_pct(t_flag *flag, int i)
 	return (i);
 }
 
-int		ft_specs(va_list arg, const char **format, t_flag *flag, int i)
+int	ft_specs(va_list arg, const char **format, t_flag *flag, int i)
 {
 	i = 0;
 	if (**format == '%')

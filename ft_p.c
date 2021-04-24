@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_p.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 13:32:25 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:36:52 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
-int		p_count(unsigned long long int n)
+int	p_count(unsigned long long int n)
 {
 	int	i;
 
@@ -28,7 +16,7 @@ int		p_count(unsigned long long int n)
 	return (i);
 }
 
-int		ft_p_dot(t_flag *flag, int i, unsigned long long int p)
+int	ft_p_dot(t_flag *flag, int i, unsigned long long int p)
 {
 	i = 0;
 	num_flag(flag);
@@ -46,7 +34,7 @@ int		ft_p_dot(t_flag *flag, int i, unsigned long long int p)
 	return (i);
 }
 
-int		ft_p_solo(t_flag *flag, int i, unsigned long long int p)
+int	ft_p_solo(t_flag *flag, int i, unsigned long long int p)
 {
 	i = 0;
 	num_flag(flag);
@@ -72,9 +60,9 @@ int		ft_p_solo(t_flag *flag, int i, unsigned long long int p)
 	return (i);
 }
 
-int		ft_p(va_list arg, t_flag *flag, int i)
+int	ft_p(va_list arg, t_flag *flag, int i)
 {
-	unsigned long long int p;
+	unsigned long long int	p;
 
 	p = va_arg(arg, unsigned long long int);
 	flag->len = p_count(p);

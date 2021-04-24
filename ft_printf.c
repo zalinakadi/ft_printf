@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 01:04:42 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:32:08 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
-int		print_format(va_list arg, const char **format)
+int	print_format(va_list arg, const char **format)
 {
 	t_flag	flag;
 	int		i;
@@ -38,9 +26,9 @@ int		print_format(va_list arg, const char **format)
 	return (i);
 }
 
-int		ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	va_list arg;
+	va_list	arg;
 	int		done;
 
 	done = 0;

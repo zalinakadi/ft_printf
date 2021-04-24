@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_di.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: eproveme <eproveme@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 13:25:29 by eproveme          #+#    #+#             */
-/*   Updated: 2021/01/21 16:35:54 by eproveme         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
-int		di_count(long int n)
+int	di_count(long int n)
 {
 	int	i;
 
@@ -33,7 +21,7 @@ int		di_count(long int n)
 	return (i);
 }
 
-int		ft_di_mindot(t_flag *flag, int i, int n)
+int	ft_di_mindot(t_flag *flag, int i, int n)
 {
 	i = 0;
 	num_flag(flag);
@@ -54,7 +42,7 @@ int		ft_di_mindot(t_flag *flag, int i, int n)
 	return (i);
 }
 
-int		ft_di_plusdot(t_flag *flag, int i, int n)
+int	ft_di_plusdot(t_flag *flag, int i, int n)
 {
 	i = 0;
 	num_flag(flag);
@@ -78,7 +66,7 @@ int		ft_di_plusdot(t_flag *flag, int i, int n)
 	return (i);
 }
 
-int		ft_di_solo(t_flag *flag, int i, int n)
+int	ft_di_solo(t_flag *flag, int i, int n)
 {
 	i = 0;
 	num_flag(flag);
@@ -104,7 +92,7 @@ int		ft_di_solo(t_flag *flag, int i, int n)
 	return (i);
 }
 
-int		ft_d_i(va_list arg, t_flag *flag, int i)
+int	ft_d_i(va_list arg, t_flag *flag, int i)
 {
 	int	n;
 
